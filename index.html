@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Of Gym</title>
+</head>
+<body>
+
+    <header>
+        <h1>Trung tâm giáo dục ABC xin chào<br></h1>
+        <br>
+    </header>
+    <div>
+        <form action="/submit" method="post">
+            <fieldset>
+                <h2>Thông tin cơ bản khách hàng</h2>
+                <label for="name">Họ tên học viên</label>
+                <input type="text" id="name" name="name">
+                <br>
+                <label for="sinhnhat">Ngày sinh:</label>
+                <input type="date" id="sinhnhat" name="sinhnhat">
+                <br>
+                <label for="sdt">Số điện thoại</label>
+                <input type="text" name="sdt" id="sdt" pattern="0\d*">
+                <br>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <br>
+                <label for="kh">Tên khóa học</label>
+                <input type="text" name="kh" id="kh">
+                <br>
+                <label for="sang">Thời gian: Sáng</label>
+                <input type="radio" name="thoigian" id="sang">
+                <label for="chieu">Chiều</label>
+                <input type="radio" name="thoigian" id="chieu">
+                <label for="toi">Tối</label>
+                <input type="radio" name="thoigian" id="toi">
+                <br>
+                <label for="tt">Hình thức: Trực tuyến</label>
+                <input type="radio" name="ht" id="tt">
+                <label for="tp">Trực tiếp</label>
+                <input type="radio" name="ht" id="tp">
+                <br>
+                <label for="bd">Ngày bắt đầu:</label>
+                <input type="date" id="bd" name="bd">
+                <br>
+                <label for="ghichu">Ghi chú: </label>
+                <textarea id="chichu" name="ghichu" rows="4" cols="50"></textarea>
+                <br>
+            </fieldset>
+            <input type="submit" value="Gửi">
+            <button type="button" onclick="func()" >Clear</button>
+        </form>
+    </div>
+
+    <script>
+        function func() {
+            document.getElementById("name").value = "";
+            document.getElementById("sinhnhat").value = "";
+            document.getElementById("sdt").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("kh").value = "";
+            document.getElementById("bd").value = "";
+            document.getElementById("ghichu").value = "";
+        }
+    </script>
+
+    <div>
+        <form action="/submit" method="post">
+            <fieldset>
+                <h2>Phiếu khảo sát đánh giá của khách hàng</h2>
+        
+                <label for="dunggio">Đúng giờ</label>
+                <input type="range" name="dunggio" id="dunggio" min="1" max="5" step="1" value="5">
+                <br>
+                <label for="co_so_vat_chat">Cơ sở vật chất</label>
+                <input type="range" name="co_so_vat_chat" id="co_so_vat_chat" min="1" max="5" step="1" value="5">
+                <br>
+                <label for="hieu_bai">Mức độ hiểu bài</label>
+                <input type="range" name="hieu_bai" id="hieu_bai" min="1" max="5" step="1" value="5">
+                <br>
+                <label for="thai_do_gv">Thái độ của giao viên</label>
+                <input type="range" name="thai_do_gv" id="thai_do_gv" min="1" max="5" step="1" value="5">
+                <br>
+                <label for="y_kien">Ý kiến, đóng góp: </label>
+                <textarea id="chichu" name="y_kien" rows="8" cols="50"></textarea>
+                <br>
+                <br>
+            </fieldset>
+            <input type="submit" value="Gửi">
+        </form>
+    </div>
+</body>
+
+<style>
+    table {
+        border-collapse: collapse; /* để loại bỏ khoảng trắng giữa các ô */
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid black; /* để thêm đường kẻ cho các ô */
+        padding: 8px; /* để tạo khoảng cách giữa nội dung và đường kẻ */
+        text-align: left; /* để căn lề nội dung trong ô */
+    }
+
+    th {
+        background-color: #f2f2f2; /* để tạo màu nền cho các ô tiêu đề */
+    }
+</style>
+
+</html>
